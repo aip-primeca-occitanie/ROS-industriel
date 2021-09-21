@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rx60_description
+    relative_path: urdf/rx60.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/rx60.srdf
+  CONFIG:
+    author_name: Christopher Mäurer
+    author_email: chma0038@stud.hs-kl.de
+    generated_timestamp: 1543573521

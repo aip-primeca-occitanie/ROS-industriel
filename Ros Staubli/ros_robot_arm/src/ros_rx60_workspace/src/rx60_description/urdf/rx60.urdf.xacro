@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<robot name="rx60" xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+  <!-- Import transmission and gazebo elements -->
+  <xacro:include filename="$(find rx60_description)/urdf/rx60.transmission.xacro"/>
+  <xacro:include filename="$(find rx60_description)/urdf/rx60.gazebo.xacro"/>
+
+
+  <!-- Links -->
+
+  <link name="base_link">
+    <inertial>
+      <!-- geschaetzte Werte -->
+      <origin xyz="0 0 0.2" rpy="0 0 0"/>
+      <mass value="7"/>
+      <inertia 
+        ixx="0.02" ixy="0.0"  ixz="0.0" 
+        iyy="0.02" iyz="0.0" 
+        izz="0.2"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rx60_description/meshes/base.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.025" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.12" length="0.05"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0.11" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.185"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="shoulder_link">
+    <inertial>
+      <!-- geschaetzte Werte -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="10"/>
+      <inertia 
+        ixx="0.066" ixy="0.0"   ixz="0.0" 
+        iyy="0.066" iyz="0.0" 
+        izz="0.066"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rx60_description/meshes/shoulder.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 -0.085" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.09" length="0.1"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0.045 0" rpy="-1.5707963 0 0"/>
+      <geometry>
+        <cylinder radius="0.1" length="0.1"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0.005 -0.034 0.014" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.2 0.22 0.18"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="arm_link">
+    <inertial>
+      <!-- geschaetzte Werte -->
+      <origin xyz="0 0 0.16" rpy="0 0 0"/>
+      <mass value="10"/>
+      <inertia 
+        ixx="0.7" ixy="0.0" ixz="0.0" 
+        iyy="0.0" iyz="0.0" 
+        izz="0.7"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 1.5707963"/>
+      <geometry>
+        <mesh filename="package://rx60_description/meshes/arm.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0.14 0 0.16" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.47 0.18 0.09"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="elbow_link">
+    <inertial>
+      <!-- geschaetzte Werte -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="8"/>
+      <inertia 
+        ixx="0.035" ixy="0.0"   ixz="0.0" 
+        iyy="0.035" iyz="0.0" 
+        izz="0.35"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.1415926 0 1.5707963"/>
+      <geometry>
+        <mesh filename="package://rx60_description/meshes/elbow.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 -0.007" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.21 0.16 0.135"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="forearm_link">
+    <inertial>
+      <!-- geschaetzte Werte -->
+      <origin xyz="0 0 0.18" rpy="0 0 0"/>
+      <mass value="4"/>
+      <inertia 
+        ixx="0.012" ixy="0.0"   ixz="0.0" 
+        iyy="0.012" iyz="0.0" 
+        izz="0.007"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rx60_description/meshes/forearm.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0.18" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.06" length="0.14"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0.035 0.31" rpy="-1.5707963 0 0"/>
+      <geometry>
+        <cylinder radius="0.029" length="0.02"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 -0.035 0.31" rpy="-1.5707963 0 0"/>
+      <geometry>
+        <cylinder radius="0.029" length="0.02"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="wrist_link">
+    <inertial>
+      <!-- geschaetzte Werte -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia 
+        ixx="0.001" ixy="0.0"   ixz="0.0" 
+        iyy="0.001" iyz="0.0" 
+        izz="0.001"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="3.1415926 0 1.5707963"/>
+      <geometry>
+        <mesh filename="package://rx60_description/meshes/wrist.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0.025 0 0" rpy="0 -1.5707963 0"/>
+      <geometry>
+        <cylinder radius="0.017" length="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="tool_link">
+    <inertial>
+      <!-- geschaetzte Werte -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1"/>
+      <inertia 
+        ixx="0.001" ixy="0.0"   ixz="0.0" 
+        iyy="0.001" iyz="0.0" 
+        izz="0.001"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rx60_description/meshes/tool.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 -0.005" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.023" length="0.01"/>
+      </geometry>
+    </collision>
+  </link>
+
+
+  <!-- Joints -->
+  <joint name="joint1" type="revolute">
+    <origin xyz="0 0 0.341" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="shoulder_link"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.7925" upper="2.7925" velocity="5" effort="330.0"/>
+    <dynamics friction="0.001" damping="1"/>
+  </joint>
+
+  <joint name="joint2" type="revolute">
+    <origin xyz="0 0 0" rpy="-1.5707963 -1.5707963 0"/>
+    <parent link="shoulder_link"/>
+    <child link="arm_link"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.2253" upper="2.2253" velocity="5" effort="330.0"/>
+    <dynamics friction="0.001" damping="1"/>
+  </joint>
+
+  <joint name="joint3" type="revolute">
+    <origin xyz="0.290 0 0.049" rpy="0 0 0"/>
+    <parent link="arm_link"/>
+    <child link="elbow_link"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.3474" upper="2.3474" velocity="5.5" effort="150.0"/>
+    <dynamics friction="0.001" damping="1"/>
+  </joint>
+
+  <joint name="joint4" type="revolute">
+    <origin xyz="0 0 0" rpy="1.5707963 0 1.5707963"/>
+    <parent link="elbow_link"/>
+    <child link="forearm_link"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-4.7123" upper="4.7123" velocity="7.1" effort="54.0"/>
+    <dynamics friction="0.001" damping="1"/>
+  </joint>
+
+  <joint name="joint5" type="revolute">
+    <origin xyz="0 0 0.310" rpy="-1.5707963 -1.5707963 0"/>
+    <parent link="forearm_link"/>
+    <child link="wrist_link"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.9111" upper="2.1031" velocity="5.5" effort="54.0"/>
+    <dynamics friction="0.001" damping="1"/>
+  </joint>
+
+  <joint name="joint6" type="revolute">
+    <origin xyz="0.065 0 0" rpy="1.5707963 0 1.5707963"/>
+    <parent link="wrist_link"/>
+    <child link="tool_link"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-4.7124" upper="4.7124" velocity="12.2" effort="32.0"/>
+    <dynamics friction="0.001" damping="1"/>
+  </joint>
+
+
+</robot>

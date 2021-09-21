@@ -1,0 +1,7 @@
+/MANIFEST
+/build/
+/dist/
+*.pyc
+/*.egg-info/
+/.idea/
+/.vscode/
