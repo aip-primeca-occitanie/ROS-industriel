@@ -7,7 +7,9 @@ Pour piloter un automate type (modicon) de chez Schneider , les étapes sont nec
 3. déclaré la variable que l'on souhaite partager
 4. recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager
 
-script de base pour lire les entrées sorties
+script de base pour lire les entrées sorties :
+
+ 	``` 
 
 > from pyModbusTCP.client import ModbusClient
 > import time
@@ -36,3 +38,5 @@ script de base pour lire les entrées sorties
 >         # if success display registers
 >         if regs:
 >             print("reg ad #0 to 1: "+str(regs))
+
+ 	``` 
