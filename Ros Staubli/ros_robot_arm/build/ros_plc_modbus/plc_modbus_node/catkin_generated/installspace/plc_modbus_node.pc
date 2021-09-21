@@ -1,0 +1,8 @@
+prefix=/home/aip/ros_robot_arm/install
+
+Name: plc_modbus_node
+Description: Description of plc_modbus_node
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

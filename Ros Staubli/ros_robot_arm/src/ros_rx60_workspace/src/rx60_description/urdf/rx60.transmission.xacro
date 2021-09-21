@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+  <!-- Transmissions -->
+  <transmission name="joint1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>30</mechanicalReduction>  <!-- geschaetzter Wert -->
+    </actuator>
+  </transmission>
+
+  <transmission name="joint2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>30</mechanicalReduction>  <!-- geschaetzter Wert -->
+    </actuator>
+  </transmission>
+
+  <transmission name="joint3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>30</mechanicalReduction>  <!-- geschaetzter Wert -->
+    </actuator>
+  </transmission>
+
+  <transmission name="joint4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>15</mechanicalReduction>  <!-- geschaetzter Wert -->
+    </actuator>
+  </transmission>
+
+  <transmission name="joint5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint5">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>15</mechanicalReduction>  <!-- geschaetzter Wert -->
+    </actuator>
+  </transmission>
+
+  <transmission name="joint6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint6">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>15</mechanicalReduction>  <!-- geschaetzter Wert -->
+    </actuator>
+  </transmission>
+
+
+</robot>

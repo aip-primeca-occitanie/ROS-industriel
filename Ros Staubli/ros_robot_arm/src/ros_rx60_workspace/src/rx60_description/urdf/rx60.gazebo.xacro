@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/rx60</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+
+  <!-- Link1 -->
+  <gazebo reference="base_link">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- Link2 -->
+  <gazebo reference="shoulder_link">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- Link3 -->
+  <gazebo reference="arm_link">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- Link4 -->
+  <gazebo reference="elbow_link">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- Link5 -->
+  <gazebo reference="forearm_link">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- Link6 -->
+  <gazebo reference="wrist_link">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <!-- Link7 -->
+  <gazebo reference="tool_link">
+    <selfCollide>true</selfCollide>
+  </gazebo>
+
+
+  <!-- Joint1 -->
+  <gazebo reference="joint1">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  <!-- Joint2 -->
+  <gazebo reference="joint2">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  <!-- Joint3 -->
+  <gazebo reference="joint3">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  <!-- Joint4 -->
+  <gazebo reference="joint4">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  <!-- Joint5 -->
+  <gazebo reference="joint5">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+  <!-- Joint6 -->
+  <gazebo reference="joint6">
+    <provideFeedback>true</provideFeedback>
+  </gazebo>
+
+
+  <!-- fix base_link to Gazebo world -->
+  <link name="world"/>
+
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+
+</robot>

@@ -1,0 +1,8 @@
+prefix=/home/aip/ros_robot_arm/devel
+
+Name: rx60_control
+Description: Description of rx60_control
+Version: 0.1.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

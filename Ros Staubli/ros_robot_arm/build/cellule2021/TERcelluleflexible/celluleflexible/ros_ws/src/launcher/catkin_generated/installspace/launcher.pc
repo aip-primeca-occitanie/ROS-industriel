@@ -1,0 +1,8 @@
+prefix=/home/aip/ros_robot_arm/install
+
+Name: launcher
+Description: Description of launcher
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
