@@ -10,32 +10,32 @@ Pour piloter un automate type (modicon) de chez Schneider , les étapes sont nec
 script de base pour lire les entrées sorties :
 
  	```
-  > from pyModbusTCP.client import ModbusClient
-> import time
->
-> SERVER_HOST = "xxx.xxx.xxx.xxx"
-> SERVER_PORT = 502
->
-> c = ModbusClient()
->
-> # uncomment this line to see debug message
-> #c.debug(True)
->
-> # define modbus server host, port
-> c.host(SERVER_HOST)
-> c.port(SERVER_PORT)
->
-> while True:
->     # open or reconnect TCP to server
->     if not c.is_open():
->         if not c.open():
->             print("unable to connect to "+SERVER_HOST+":"+str(SERVER_PORT))
->
->     # if open() is ok, read register (modbus function 0x03)
->     if c.is_open():
->         regs = c.read_coils(0,1)
->         # if success display registers
->         if regs:
->             print("reg ad #0 to 1: "+str(regs))
+from pyModbusTCP.client import ModbusClient
+import time
+
+SERVER_HOST = "xxx.xxx.xxx.xxx"
+SERVER_PORT = 502
+
+c = ModbusClient()
+
+# uncomment this line to see debug message
+#c.debug(True)
+
+# define modbus server host, port
+c.host(SERVER_HOST)
+c.port(SERVER_PORT)
+
+while True:
+     # open or reconnect TCP to server
+     if not c.is_open():
+         if not c.open():
+             print("unable to connect to "+SERVER_HOST+":"+str(SERVER_PORT))
+
+     # if open() is ok, read register (modbus function 0x03)
+     if c.is_open():
+         regs = c.read_coils(0,1)
+         # if success display registers
+         if regs:
+             print("reg ad #0 to 1: "+str(regs))
 ``` 
 
