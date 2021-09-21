@@ -1,0 +1,2 @@
+com_arm:ros_plc_modbus/plc_modbus_node:ros_rx60_workspace/src/rx60_control:ros_rx60_workspace/src/rx60_description:ros_rx60_workspace/src/rx60_gazebo:ros_rx60_workspace/src/rx60_moveit_config
+-DCATKIN_DEVEL_PREFIX=/home/aip/ros_robot_arm/devel -DCMAKE_INSTALL_PREFIX=/home/aip/ros_robot_arm/install -G Unix Makefiles

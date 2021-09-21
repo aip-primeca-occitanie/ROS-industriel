@@ -1,0 +1,8 @@
+prefix=/home/aip/ros_robot_arm/devel
+
+Name: modbus
+Description: Description of modbus
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

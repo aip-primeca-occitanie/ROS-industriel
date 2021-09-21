@@ -1,0 +1,8 @@
+prefix=/home/aip/ros_robot_arm/devel
+
+Name: rx60_description
+Description: Description of rx60_description
+Version: 0.1.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

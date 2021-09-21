@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/aip/ros_robot_arm/devel/setup.sh

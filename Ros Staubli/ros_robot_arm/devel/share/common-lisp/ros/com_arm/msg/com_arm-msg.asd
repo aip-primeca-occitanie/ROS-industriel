@@ -1,0 +1,21 @@
+
+(cl:in-package :asdf)
+
+(defsystem "com_arm-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "Calib_camera" :depends-on ("_package_Calib_camera"))
+    (:file "_package_Calib_camera" :depends-on ("_package"))
+    (:file "Cart" :depends-on ("_package_Cart"))
+    (:file "_package_Cart" :depends-on ("_package"))
+    (:file "Control_cellule" :depends-on ("_package_Control_cellule"))
+    (:file "_package_Control_cellule" :depends-on ("_package"))
+    (:file "Joint" :depends-on ("_package_Joint"))
+    (:file "_package_Joint" :depends-on ("_package"))
+    (:file "Objet_camera" :depends-on ("_package_Objet_camera"))
+    (:file "_package_Objet_camera" :depends-on ("_package"))
+    (:file "Retour_navette" :depends-on ("_package_Retour_navette"))
+    (:file "_package_Retour_navette" :depends-on ("_package"))
+    (:file "State" :depends-on ("_package_State"))
+    (:file "_package_State" :depends-on ("_package"))
+  ))
