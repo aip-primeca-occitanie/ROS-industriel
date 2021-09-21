@@ -10,7 +10,6 @@ Pour piloter un automate type (modicon) de chez Schneider , les étapes sont nec
 script de base pour lire les entrées sorties :
 
  	``` 
-
 > from pyModbusTCP.client import ModbusClient
 > import time
 >
@@ -38,5 +37,5 @@ script de base pour lire les entrées sorties :
 >         # if success display registers
 >         if regs:
 >             print("reg ad #0 to 1: "+str(regs))
-
  	``` 
+
