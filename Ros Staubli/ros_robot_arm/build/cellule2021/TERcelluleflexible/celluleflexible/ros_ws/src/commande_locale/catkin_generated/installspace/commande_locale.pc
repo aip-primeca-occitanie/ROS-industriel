@@ -1,8 +1,0 @@
-prefix=/home/aip/ros_robot_arm/install
-
-Name: commande_locale
-Description: Description of commande_locale
-Version: 3.1.2
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime

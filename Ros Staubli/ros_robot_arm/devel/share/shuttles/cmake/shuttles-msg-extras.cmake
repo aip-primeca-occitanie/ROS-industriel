@@ -1,2 +1,0 @@
-set(shuttles_MESSAGE_FILES "/home/aip/ros_robot_arm/src/cellule2021/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/msg/msgShuttleChange.msg;/home/aip/ros_robot_arm/src/cellule2021/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/msg/msgShuttleCreate.msg;/home/aip/ros_robot_arm/src/cellule2021/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/msg/Msg_Erreur.msg")
-set(shuttles_SERVICE_FILES "/home/aip/ros_robot_arm/src/cellule2021/TERcelluleflexible/celluleflexible/ros_ws/src/shuttles/srv/shuttle_id.srv")

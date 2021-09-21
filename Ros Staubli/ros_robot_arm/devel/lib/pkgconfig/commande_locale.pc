@@ -1,8 +1,0 @@
-prefix=/home/aip/ros_robot_arm/devel
-
-Name: commande_locale
-Description: Description of commande_locale
-Version: 3.1.2
-Cflags: -I/home/aip/ros_robot_arm/devel/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime

@@ -1,8 +1,0 @@
-prefix=/home/aip/ros_robot_arm/install
-
-Name: aiguillages
-Description: Description of aiguillages
-Version: 3.1.2
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: roscpp message_runtime
