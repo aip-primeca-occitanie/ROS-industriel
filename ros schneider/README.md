@@ -2,10 +2,10 @@
 
 Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate :
 
-1.faire apparaitre les mémoires partagés
-2.vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0)
-3.déclaré la variable que l'on souhaite partager
-4.recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager
+1. faire apparaitre les mémoires partagés
+2. vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0)
+3. déclaré la variable que l'on souhaite partager
+4. recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager
 
 script de base pour lire les entrées sorties
 
