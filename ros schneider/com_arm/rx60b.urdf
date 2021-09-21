@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<robot
+ name="rx60b">
+ 
+<link
+   name="base_link">
+    <inertial>
+      <origin
+       xyz="0.087105 -0.023324 0.064435"
+       rpy="0 0 0" />
+      <mass
+       value="5.9088" />
+      <inertia
+       ixx="0.03296"
+       ixy="0.0030847"
+       ixz="0.0025234"
+       iyy="0.052353"
+       iyz="0.00040062"
+       izz="0.044104" />
+    </inertial>
+    <visual>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+       name="">
+        <color
+         rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+ 
+ 
+  <link
+   name="link 1">
+    <inertial>
+      <origin
+       xyz="-0.0013733 -0.016618 0.12463"
+       rpy="0 0 0" />
+      <mass
+       value="9.5013" />
+      <inertia
+       ixx="0.073083"
+       ixy="0.0014723"
+       ixz="-0.00012426"
+       iyy="0.066123"
+       iyz="0.00035551"
+       izz="0.065589" />
+    </inertial>
+    <visual>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 1.STL" />
+      </geometry>
+      <material
+       name="">
+        <color
+         rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+ 
+  <joint
+   name="joint 1"
+   type="continuous">
+    <origin
+     xyz="0.1018 -0.17499 -0.019184"
+     rpy="1.5708 -0.1022 6.2798E-18" />
+    <parent
+     link="base_link" />
+    <child
+     link="link 1" />
+    <axis
+     xyz="0 0 -1" />
+  </joint>
+ 
+  <link
+   name="link 2">
+    <inertial>
+      <origin
+       xyz="5.35785074187722E-06 -0.13819594838364 0.0579614533986904"
+       rpy="0 0 0" />
+      <mass
+       value="6.66133333336737" />
+      <inertia
+       ixx="0.112308373729251"
+       ixy="-3.18155480526737E-06"
+       ixz="-1.17901121422264E-06"
+       iyy="0.0190534165600719"
+       iyz="0.00173694047302758"
+       izz="0.121590131015996" />
+    </inertial>
+    <visual>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 2.STL" />
+      </geometry>
+      <material
+       name="">
+        <color
+         rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+ 
+  <joint
+   name="joint 2"
+   type="continuous">
+    <origin
+     xyz="0 0.0851584689875044 0.132002423116551"
+     rpy="-1.5707963267949 0.924387682926635 -6.48587900268348E-15" />
+    <parent
+     link="link 1" />
+    <child
+     link="link 2" />
+    <axis
+     xyz="0 0 -1" />
+  </joint>
+ 
+  <link
+   name="link 3">
+    <inertial>
+      <origin
+       xyz="-0.00358959902083128 0.011742865086937 -0.0635717585818727"
+       rpy="0 0 0" />
+      <mass
+       value="3.98888535498701" />
+      <inertia
+       ixx="0.0205200690339669"
+       ixy="0.000592975613298006"
+       ixz="0.000377566029771131"
+       iyy="0.0117855874251901"
+       iyz="0.000110784441879016"
+       izz="0.0227045777593948" />
+    </inertial>
+    <visual>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 3.STL" />
+      </geometry>
+      <material
+       name="">
+        <color
+         rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 3.STL" />
+      </geometry>
+    </collision>
+  </link>
+ 
+  <joint
+   name="joint 3"
+   type="continuous">
+    <origin
+     xyz="0 -0.289999999999999 0"
+     rpy="3.34089999486137E-15 -8.32667268468867E-16 -0.924387682926635" />
+    <parent
+     link="link 2" />
+    <child
+     link="link 3" />
+    <axis
+     xyz="0 0 -1" />
+  </joint>
+ 
+  <link
+   name="link 4">
+    <inertial>
+      <origin
+       xyz="-0.00362145042868084 -2.95189483870417E-07 0.0877304991006294"
+       rpy="0 0 0" />
+      <mass
+       value="1.77031472723019" />
+      <inertia
+       ixx="0.00716596497887195"
+       ixy="-5.15205318731829E-08"
+       ixz="-0.000290973905238371"
+       iyy="0.0067998588007604"
+       iyz="3.04404694731085E-08"
+       izz="0.00287950159938892" />
+    </inertial>
+    <visual>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 4.STL" />
+      </geometry>
+      <material
+       name="">
+        <color
+         rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 4.STL" />
+      </geometry>
+    </collision>
+  </link>
+ 
+  <joint
+   name="joint 4"
+   type="continuous">
+    <origin
+     xyz="0 -0.10999672942251 -0.0556584689875044"
+     rpy="1.5707963267949 0.366575715850138 0" />
+    <parent
+     link="link 3" />
+    <child
+     link="link 4" />
+    <axis
+     xyz="0 0 -1" />
+  </joint>
+ 
+  <link
+   name="link 5">
+    <inertial>
+      <origin
+       xyz="0.0149890074254873 1.2705456220452E-07 2.22852081649405E-08"
+       rpy="0 0 0" />
+      <mass
+       value="0.137404854550506" />
+      <inertia
+       ixx="4.48923224111051E-05"
+       ixy="6.28511107557327E-10"
+       ixz="4.78259253648911E-11"
+       iyy="8.24613062389126E-05"
+       iyz="-4.47187831795982E-10"
+       izz="7.87260415300744E-05" />
+    </inertial>
+    <visual>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 5.STL" />
+      </geometry>
+      <material
+       name="">
+        <color
+         rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 5.STL" />
+      </geometry>
+    </collision>
+  </link>
+ 
+  <joint
+   name="joint 5"
+   type="continuous">
+    <origin
+     xyz="0 0 0.199003270577489"
+     rpy="1.5707963267949 -0.556573940351745 3.14159265358979" />
+    <parent
+     link="link 4" />
+    <child
+     link="link 5" />
+    <axis
+     xyz="0 0 -1" />
+  </joint>
+ 
+  <link
+   name="link 6">
+    <inertial>
+      <origin
+       xyz="-0.00017364 -1.1102E-16 -0.0051359"
+       rpy="0 0 0" />
+      <mass
+       value="0.012467" />
+      <inertia
+       ixx="1.5047E-06"
+       ixy="3.1764E-22"
+       ixz="-3.5412E-09"
+       iyy="1.4702E-06"
+       iyz="6.6969E-21"
+       izz="2.7794E-06" />
+    </inertial>
+    <visual>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 6.STL" />
+      </geometry>
+      <material
+       name="">
+        <color
+         rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0 0 0"
+       rpy="0 0 0" />
+      <geometry>
+        <mesh
+         filename="package://rx60b_description/meshes/link 6.STL" />    
+      </geometry>
+    </collision>
+  </link>
+ 
+  <joint
+   name="joint 6"
+   type="fixed"
+   >
+    <origin
+     xyz="0.064 1 2"
+     rpy="1.5708 0.53983 1.5708" />
+    <parent
+     link="link 5" />
+    <child
+     link="link 6" />
+    <axis
+     xyz="0 0 0" />
+ 
+  </joint>
+</robot>

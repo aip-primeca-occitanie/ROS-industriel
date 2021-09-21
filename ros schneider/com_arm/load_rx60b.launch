@@ -1,0 +1,3 @@
+<launch>
+	<param name="robot_description" textfile="$(find com_arm)/rx60b.urdf" />
+</launch>
