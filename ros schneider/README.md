@@ -1,7 +1,36 @@
 # projet-ROS-robots-industriels
 
-Voici les projets autour de ros developpés par l'aip primeca. Ils s'articulent essentiellement autour des robots industriels. 
-Les 3 familles sont kuka, staubli et yaskawa. 
-Un driver a été crée pour le robot staubli RX60 (val3). Vous trouverez dans ce dépot , un driver à mettre dans votre robots industriels (Votre baie doit être au minimun en 7.10).
-Il ne dépend pas de d'un robot en particulier.
-Puis vous avez le paquet ROS qui lui est spécifique au rx60 (il suffira de récupérer la géométrie de votre robots pour faire fonctionner ROS).
+faire apparaitre les mémoires partagés
+vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0)
+déclaré la variable que l'on souhaite partager
+recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager
+
+script de base pour lire les entrées sorties
+
+> from pyModbusTCP.client import ModbusClient
+> import time
+>
+> SERVER_HOST = "xxx.xxx.xxx.xxx"
+> SERVER_PORT = 502
+>
+> c = ModbusClient()
+>
+> # uncomment this line to see debug message
+> #c.debug(True)
+>
+> # define modbus server host, port
+> c.host(SERVER_HOST)
+> c.port(SERVER_PORT)
+>
+> while True:
+>     # open or reconnect TCP to server
+>     if not c.is_open():
+>         if not c.open():
+>             print("unable to connect to "+SERVER_HOST+":"+str(SERVER_PORT))
+>
+>     # if open() is ok, read register (modbus function 0x03)
+>     if c.is_open():
+>         regs = c.read_coils(0,1)
+>         # if success display registers
+>         if regs:
+>             print("reg ad #0 to 1: "+str(regs))
