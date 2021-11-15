@@ -39,7 +39,7 @@ while True:
              print("reg ad #0 to 1: "+str(regs))
 ``` 
 
-Le dossier est près à la compilation
+#Le dossier est pret à la compilation
 
 ```bash
 # change to the src folder of the Catkin workspace
@@ -59,16 +59,19 @@ catkin_make
 ## Activating the workspace
 
 If you are working with multiple workspaces activate the new one with :
+
 ```bash
 source ~/catkin_ws/devel/setup.bash
 ```
+
 If you are working with one workspace only, you can use:
+
 ```bash
 echo "source  ~/catkin_ws/devel/setup.bash"  >>  ~/.bashrc 
 source ~/.bashrc 
 ```
 
-Enfin vous pourrez lancer votre roslaunch
+#Enfin vous pourrez lancer votre roslaunch
 ```
 roslaunch schneider roslaunch_cellule.launch
 ````
