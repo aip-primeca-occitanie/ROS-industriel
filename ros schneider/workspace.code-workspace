@@ -1,0 +1,13 @@
+{
+	"folders": [],
+	"settings": {
+		"python.autoComplete.extraPaths": [
+			"/home/aip/developpement/cellule_tp/devel/lib/python2.7/dist-packages",
+			"/opt/ros/melodic/lib/python2.7/dist-packages"
+		],
+		"python.analysis.extraPaths": [
+			"/home/aip/developpement/cellule_tp/devel/lib/python2.7/dist-packages",
+			"/opt/ros/melodic/lib/python2.7/dist-packages"
+		]
+	}
+}
