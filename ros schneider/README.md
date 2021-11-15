@@ -54,10 +54,10 @@ cd ~/catkin_ws/
 # build the workspace
 catkin_make
 ```
-Puis n'oubliez pas de sourcer votre code
 
 ```
 ## Activating the workspace
+
 If you are working with multiple workspaces activate the new one with :
 ```bash
 source ~/catkin_ws/devel/setup.bash
