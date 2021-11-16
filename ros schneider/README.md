@@ -1,11 +1,12 @@
 # projet-ROS-robots-industriels
 
-Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate :
+Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate. Ces étapes sont nécessaire pour la mise en place de la mémoire partagée. 
+Celle-ci va communiquer avec le programme python client_cellule_tp.py, le programme app_cellule.cpp va lui recupérer ses informations afin de créer les différents scénarios. 
 
-1. faire apparaitre les mémoires partagés
-2. vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0)
-3. déclaré la variable que l'on souhaite partager
-4. recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager
+1. faire apparaitre les mémoires partagés (mise au point.png)
+2. vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0) (objet d'ES.png)
+3. déclaré la variable que l'on souhaite partager  (editeur.png) (varialbe automate cellule.png)
+4. recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager (equation signal.png)
 
 script de base pour lire les entrées sorties :
 
@@ -39,7 +40,7 @@ while True:
              print("reg ad #0 to 1: "+str(regs))
 ``` 
 
-#Le dossier est pret à la compilation
+# Le dossier est prêt à la compilation 
 
 ```bash
 # change to the src folder of the Catkin workspace
