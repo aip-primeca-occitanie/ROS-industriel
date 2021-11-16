@@ -1,5 +1,7 @@
 # projet-ROS-robots-industriels
 
+Ce projet a été développé sous <b>ubuntu 18.04<b>, avec ros melodic (python 2,7 et gcc 11).
+
 Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate. Ces étapes sont nécessaire pour la mise en place de la mémoire partagée. 
 Celle-ci va communiquer avec le programme python client_cellule_tp.py, le programme app_cellule.cpp va lui recupérer ses informations afin de créer les différents scénarios. 
 
@@ -61,7 +63,7 @@ cd ~/catkin_ws/
 catkin_make
 ```
 
-## Activating the workspace
+## Activation de votre dossier de travail
 
 If you are working with multiple workspaces activate the new one with :
 
