@@ -7,9 +7,9 @@ Pour piloter un automate type (modicon) de chez Schneider , les étapes sont nec
 Le programme fonctionne de la façon suivante : 
 
 1. mémoire partagée met à disposition les informations automate (écriture /lecture)
-2. le programme python <b>client_cellule_tp.py<\b> va lire et ecrire ses entrées sorties
+2. le programme python <b>client_cellule_tp.py</b> va lire et ecrire ses entrées sorties
 3. Le client_cellule_tp.py va mettre les informations sur ROS
-4. le programme <b>app_cellule.cpp<\b> va orchestrer le scénario préparé par l'utilisateur
+4. le programme <b>app_cellule.cpp</b> va orchestrer le scénario préparé par l'utilisateur
 
 
 1. faire apparaitre les mémoires partagés (mise au point.png)
