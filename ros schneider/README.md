@@ -46,6 +46,7 @@ Afin d'afficher les informations des programmes, il est necessaire de mettre xte
 ```bash
  sudo apt-get install xterm
 ```
+Création de votre de dossier de développement : 
 ```bash
 # change to the src folder of the Catkin workspace
 cd ~/catkin_ws/src (ou le dossier de votre choix)
