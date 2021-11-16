@@ -43,7 +43,7 @@ while True:
 ## Le dossier est prêt à la compilation
 
 Afin d'afficher les informations des programmes, il est necessaire de mettre xterm sur votre environnement de développement :
-````bash
+```bash
  sudo apt-get install xterm
 ```
 ```bash
