@@ -2,8 +2,15 @@
 
 Ce projet a été développé sous <b>ubuntu 18.04</b>, avec <b>ros melodic</b> (python 2.7 et gcc 11).
 
-Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate. Ces étapes sont nécessaire pour la mise en place de la mémoire partagée. 
-Celle-ci va communiquer avec le programme python client_cellule_tp.py, le programme app_cellule.cpp va lui recupérer ses informations afin de créer les différents scénarios. 
+Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate. Elles permettent la mise en place de la mémoire partagée. 
+
+Le programme fonctionne de la façon suivante : 
+
+1. mémoire partagée met à disposition les informations automate (écriture /lecture)
+2. le programme python <b>client_cellule_tp.py<\b> va lire et ecrire ses entrées sorties
+3. Le client_cellule_tp.py va mettre les informations sur ROS
+4. le programme <b>app_cellule.cpp<\b> va orchestrer le scénario préparé par l'utilisateur
+
 
 1. faire apparaitre les mémoires partagés (mise au point.png)
 2. vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0) (objet d'ES.png)
