@@ -16,10 +16,7 @@ Le programme fonctionne de la façon suivante :
 3. Le client_cellule_tp.py va mettre les informations sur ROS
 4. Le programme <b>app_cellule.cpp</b> va orchestrer le scénario préparé par l'utilisateur
 
-
-
-
-script de base pour lire les entrées sorties :
+Voici le script de base pour lire les entrées sorties (en python):
 
 ```
 from pyModbusTCP.client import ModbusClient
