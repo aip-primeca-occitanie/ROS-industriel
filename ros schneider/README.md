@@ -4,6 +4,11 @@ Ce projet a été développé sous <b>ubuntu 18.04</b>, avec <b>ros melodic</b> 
 
 Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate. Elles permettent la mise en place de la mémoire partagée. 
 
+1. faire apparaitre les mémoires partagés (mise au point.png)
+2. vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0) (objet d'ES.png)
+3. déclaré la variable que l'on souhaite partager  (editeur.png) (varialbe automate cellule.png)
+4. recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager (equation signal.png)
+
 Le programme fonctionne de la façon suivante : 
 
 1. La mémoire partagée met à disposition les informations automate (écriture /lecture)
@@ -12,10 +17,7 @@ Le programme fonctionne de la façon suivante :
 4. Le programme <b>app_cellule.cpp</b> va orchestrer le scénario préparé par l'utilisateur
 
 
-1. faire apparaitre les mémoires partagés (mise au point.png)
-2. vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0) (objet d'ES.png)
-3. déclaré la variable que l'on souhaite partager  (editeur.png) (varialbe automate cellule.png)
-4. recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager (equation signal.png)
+
 
 script de base pour lire les entrées sorties :
 
