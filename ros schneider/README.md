@@ -42,6 +42,10 @@ while True:
 
 ## Le dossier est prêt à la compilation
 
+Afin d'afficher les informations des programmes, il est necessaire de mettre xterm sur votre environnement de développement :
+
+ sudo apt-get install xterm
+
 ```bash
 # change to the src folder of the Catkin workspace
 cd ~/catkin_ws/src (ou le dossier de votre choix)
