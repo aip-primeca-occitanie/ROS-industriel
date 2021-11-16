@@ -10,7 +10,7 @@ Celle-ci va communiquer avec le programme python client_cellule_tp.py, le progra
 
 script de base pour lire les entrées sorties :
 
- 	```
+```
 from pyModbusTCP.client import ModbusClient
 import time
 
@@ -40,7 +40,7 @@ while True:
              print("reg ad #0 to 1: "+str(regs))
 ``` 
 
-# Le dossier est prêt à la compilation 
+## Le dossier est prêt à la compilation
 
 ```bash
 # change to the src folder of the Catkin workspace
@@ -56,7 +56,6 @@ cd ~/catkin_ws/
 catkin_make
 ```
 
-```
 ## Activating the workspace
 
 If you are working with multiple workspaces activate the new one with :
@@ -73,6 +72,7 @@ source ~/.bashrc
 ```
 
 #Enfin vous pourrez lancer votre roslaunch
+
 ```
 roslaunch schneider roslaunch_cellule.launch
 ````
