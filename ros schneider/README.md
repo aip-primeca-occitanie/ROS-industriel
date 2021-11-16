@@ -60,7 +60,7 @@ Création de votre de dossier de développement :
 cd ~/catkin_ws/src (ou le dossier de votre choix)
 
 
-https://github.com/aip-primeca-occitanie/ROS-industriel/tree/master/ros%20schneider
+https://github.com/aip-primeca-occitanie/ROS-industriel/tree/master/ros%20schneider.git
 
 # change to the root of the Catkin workspace
 cd ~/catkin_ws/
