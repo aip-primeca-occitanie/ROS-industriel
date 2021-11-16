@@ -71,7 +71,7 @@ echo "source  ~/catkin_ws/devel/setup.bash"  >>  ~/.bashrc
 source ~/.bashrc 
 ```
 
-#Enfin vous pourrez lancer votre roslaunch
+## Enfin vous pourrez lancer votre roslaunch
 
 ```
 roslaunch schneider roslaunch_cellule.launch
