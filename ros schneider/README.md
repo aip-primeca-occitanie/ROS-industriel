@@ -1,4 +1,4 @@
-# projet-ROS-robots-industriels
+# projet-ROS-communication avec un automate Scheinder
 
 Ce projet a été développé sous <b>ubuntu 18.04</b>, avec <b>ros melodic</b> (python 2.7 et gcc 11).
 
