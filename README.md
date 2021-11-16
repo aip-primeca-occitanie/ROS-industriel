@@ -4,7 +4,7 @@ Voici les projets autour de ros developpés par l'aip primeca.
 Ils s'articulent essentiellement autour des robots industriels. 
 
 Les 3 familles sont 
-- kuka
+- kuka (en cours de developpement non distribué)
 - staubli
 - yaskawa
 
@@ -15,4 +15,4 @@ Puis vous avez le paquet ROS qui lui est spécifique au rx60 (il suffira de réc
 Nous avons aussi mis en place un driver pour les périphériques spécifiques :
 
 - automate Scheinder
-- camera cognex
+- camera cognex (en cours de developpement non distribué)
