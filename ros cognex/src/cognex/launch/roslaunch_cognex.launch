@@ -1,0 +1,4 @@
+<launch>
+  <node name="cognex_" pkg="cognex" type="cognex.cpp" output="screen" launch-prefix="xterm -geometry '80x20+550+0' -e" args="cognex"/>
+  <node name="ihm_cognex" pkg="cognex" type="ihm_cognex.py" 
+</launch>
