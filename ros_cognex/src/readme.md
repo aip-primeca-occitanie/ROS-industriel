@@ -13,7 +13,7 @@ Le programme fonctionne de la façon suivante :
 2. Le pilotage de la caméra se fait via le script python ihm_cognex.py
 3. Il faut pour le moment rentrer dans l'adresse de votre camera,son nom utilisateur son mot de passe
 4. Nos deux caméras ont les adresse suivantes : 192.168.1.99 et 192.168.0.98
-5. Les informations de connexion sont envoyé via la fonction connexion, les mots de passe cognex sans modification sont admin et un password vide
+5. Les informations de connexion sont envoyé via la fonction connexion, les mots de passe cognex sans modification sont <b>admin</b> et un password vide
 6. Le cheminement du programme est le suivant (exemple avec la caméra kuka) : 
 	6.1 choix de la cognex (de l'adresse ip de la caméra)
 	6.2 def kuka
