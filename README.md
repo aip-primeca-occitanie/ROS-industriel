@@ -15,4 +15,4 @@ Puis vous avez le paquet ROS qui lui est spécifique au rx60 (il suffira de réc
 Nous avons aussi mis en place un driver pour les périphériques spécifiques :
 
 - automate Scheinder
-- camera cognex (en cours de developpement non distribué)
+- camera cognex 
