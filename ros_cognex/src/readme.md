@@ -16,12 +16,19 @@ Le programme fonctionne de la façon suivante :
 5. Les informations de connexion sont envoyé via la fonction connexion, les mots de passe cognex sans modification sont <b>admin</b> et un password chaine vide ""
 6. Le cheminement du programme est le suivant (exemple avec la caméra kuka) : 
 	6.1 choix de la cognex (de l'adresse ip de la caméra)
+	
 	6.2 def kuka
+	
 	6.3 init de ROS : publication : calib et objet); souscription cart et detect	
+	
 	6.4 information de connexion 	
+	
 	6.5 effacement de l'image (précharger)
+	
 	6.6 calibration choissisait de 1 à 4 points afin de faire le changement de base 
+	
 	6.7 Cliquer sur Calibration Ok
+	
 	6.7 selectionner les options afin de détecter vos objets.  
 
 Si vous avez interconnecter votre robot (kuka ou staubli) avec les drivers ros fournit sur notre github, vous allez pouvoir le piloter via les publications cart (donnée cartesienne). 
