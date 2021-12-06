@@ -57,7 +57,7 @@ catkin_make
 If you are working with multiple workspaces activate the new one with :
 
 ```bash
-source ~/catkin_ws/devel/setup.bash
+source ~/ros_cognex/devel/setup.bash
 ```
 
 If you are working with one workspace only, you can use:
