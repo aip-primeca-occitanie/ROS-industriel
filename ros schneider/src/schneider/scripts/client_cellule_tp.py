@@ -19,6 +19,7 @@ SERVER_HOST = "192.168.0.102"
 print("adresse ip :")
 print(SERVER_HOST)
 SERVER_PORT = 502
+rospy
 print("port :")
 print ('Port {}'.format(SERVER_PORT))
 c = ModbusClient()
@@ -39,7 +40,7 @@ def retour(req):
 			flag = 1
 		resp = Retour_celluleResponse()
 		coils = c.read_coils(0, 76)
-		print ("lecture de la mémoire automate\r"),
+		print ("lecture de la mémoire automate")
 		if coils :
 			resp.ST1 = coils[0]
 			resp.ST2 = coils[1]
@@ -98,11 +99,7 @@ def retour(req):
 			resp.CP9 = coils[74]
 			resp.CP10 = coils[75]
 			return resp
-			
-		
 	
-	
-
 def callback(data):
 	trame = data.data.split(',')
 	for i in range((len(trame))):
