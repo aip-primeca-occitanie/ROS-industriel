@@ -1,6 +1,6 @@
 # projet-ROS_industriel => communication avec un automate Scheinder
 
-Ce projet a été développé sous <b>ubuntu 20.03</b>, avec <b>ros noetic</b> (python 3.8 et gcc 14).
+Ce projet a été développé sous <b>ubuntu 18.04/b>, avec <b>ros noetic</b> (python 2.7 et gcc 11).
 
 Pour piloter un automate type (modicon) de chez Schneider , les étapes sont necessaire sur l'automate. Elles permettent la mise en place de la mémoire partagée. 
 
