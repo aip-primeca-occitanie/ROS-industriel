@@ -24,8 +24,6 @@
 ######################
 */
 
-
-
 #include "cellule_tp.h"
 #include <ros/ros.h>
 #include <ros/console.h>
@@ -109,19 +107,27 @@ void lect_ecrit_autom(vector<vector<int>> bloc, std::string nom_bloc,Cellule_tp 
 
 {
 		std::cout << "Ecriture du " << nom_bloc <<"\n"<<std::endl;   
-        	cellule.write(bloc);
+        cellule.write(bloc);
 		std::cout << nom_bloc << "écrit\n" << std::endl;
 		cellule.read();
-		std::cout << "Lecture des informations automate\n" << std::endl;
+		std::cout << "Lecture des informations automate effectuées\n" << std::endl;
 }
+/* fonction d'attente conditionnel 
+void attente_conditionnel(std::string condition, lect_cellule Cellule)
 
+{
+
+        while(condition) {Cellule.read();}
+        std::cout << "condition d'attente ok\n" << std::endl;	
+}
+*/
 int main(int argc, char **argv)
 {
 	// Creation du noeud ROS
 	std::cout << "initialisation de ros\n" << std::endl;
 	ros::init(argc, argv, "app_cellule");
 	ROS_DEBUG_NAMED("verification de code", "Demarrage");
-    	ROS_DEBUG_STREAM_NAMED("verification de code", "demarrage");
+    ROS_DEBUG_STREAM_NAMED("verification de code", "demarrage");
 	ros::NodeHandle noeud;
 	
 	
@@ -141,17 +147,17 @@ int main(int argc, char **argv)
 		while(!cellule.D1D && !cellule.D2D && !cellule.D11G && !cellule.D12G) {cellule.read();}
         std::cout << "condition d'attente ok\n" << std::endl;
 		
-	lect_ecrit_autom(bloc2 , "Bloc 2 ", cellule);
+		lect_ecrit_autom(bloc2 , "Bloc 2 ", cellule);
 	   // Permet laisser du temps système 
-	ros::Duration(2).sleep();
+		ros::Duration(2).sleep();
 
-	lect_ecrit_autom(bloc3 , "Bloc 3 ", cellule);
+		lect_ecrit_autom(bloc3 , "Bloc 3 ", cellule);
         		
 		while(!cellule.D1G && !cellule.D2G && !cellule.D11D && !cellule.D12D) {cellule.read();}
         std::cout << "condition d'attente ok\n" << std::endl;
 		
-	lect_ecrit_autom(bloc2 , "Bloc 2 ", cellule);
-	ros::Duration(2).sleep(); 
+		lect_ecrit_autom(bloc2 , "Bloc 2 ", cellule);
+		ros::Duration(2).sleep(); 
 
 	}
 	

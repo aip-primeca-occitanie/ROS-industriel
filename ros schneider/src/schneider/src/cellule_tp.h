@@ -1,10 +1,9 @@
 #ifndef CELLULE_TP_H
 #define CELLULE_TP_H
-
 #include <ros/ros.h>
 #include <std_msgs/String.h>
-#include <schneider/Retour_cellule.h>
 #include <string>
+#include <schneider/Retour_cellule.h>
 using namespace std;
 
 
