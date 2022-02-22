@@ -54,13 +54,13 @@ catkin_make
 
 ## Activation de votre dossier de travail
 
-If you are working with multiple workspaces activate the new one with :
+Si vous avez plusieurs espace de travail, vous pouvez utiliser les commandes suivantes :
 
 ```bash
 source ~/ros_cognex/devel/setup.bash
 ```
 
-If you are working with one workspace only, you can use:
+Si vous avez un seul espace de travail, vous pouvez utiliser les commandes suivantes :
 
 ```bash
 echo "source  ~/ros_cognex/devel/setup.bash"  >>  ~/.bashrc 
