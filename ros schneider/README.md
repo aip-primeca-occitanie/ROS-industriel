@@ -71,13 +71,13 @@ catkin_make
 
 ## Activation de votre dossier de travail
 
-If you are working with multiple workspaces activate the new one with :
+Si vous avez de multiples espaces de travail, vous pouvez entrer les commandes suivantes :
 
 ```bash
 source ~/catkin_ws/devel/setup.bash
 ```
 
-If you are working with one workspace only, you can use:
+Si vous avez un espace de travail, vous pouvez entrer les commandes suivantes:
 
 ```bash
 echo "source  ~/catkin_ws/devel/setup.bash"  >>  ~/.bashrc 
