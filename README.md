@@ -12,6 +12,10 @@ Un driver a été crée pour le robot staubli RX60 (val3). Vous trouverez dans c
 Il ne dépend pas de d'un robot en particulier.
 Puis vous avez le paquet ROS qui lui est spécifique au rx60 (il suffira de récupérer la géométrie de votre robots pour faire fonctionner ROS).
 
+Pour faire la compilation de votre paquet ros : 
+
+catkin_make dans la racine de votre espace de travail
+
 Nous avons aussi mis en place un driver pour les périphériques spécifiques :
 
 - automate Scheinder
