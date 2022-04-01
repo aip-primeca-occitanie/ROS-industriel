@@ -23,10 +23,10 @@ catkin_make
 ## Activation de votre workspace
 si vous avez plusieurs workspaces :
 ```bash
-source ~/catkin_ws/devel/setup.bash
+source ~/ros_robot_arm/devel/setup.bash
 ```
 si vous n'en n'avez qu'un:
 ```bash
-echo "source  ~/catkin_ws/devel/setup.bash"  >>  ~/.bashrc 
+echo "source  ~/ros_robot_arm/devel/setup.bash"  >>  ~/.bashrc 
 source ~/.bashrc 
 ```
