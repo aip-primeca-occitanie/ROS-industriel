@@ -1,11 +1,32 @@
-# Compilation du projet ROS Staubli
+# ros Staubli
+Driver pour Robot staubli (ici RX60)
+
+## A propos 
+Driver pour Staubli (explication, et bibliothèque pour robot staubli)
+
+## Comment compiler ? 
+
+Il est necessaire d'installer les dépendances suivantes : 
 
 
-Pour compiler le projet (valable en noetic et melodic). 
-vous devez installer la bibliotheque libmodus 
+```bash
+sudo apt install ros-melodic-industrial-core ros-melodic-moveit 
+sudo apt install libmodbus-dev
+```
 
-sudo apt-get install libmodbus-dev
+# change to the root of the Catkin workspace
+cd ~/ros_robot_arm/
 
-vous mettre dans ROS Staubli
-
+# compilation de votre environnement de travail
 catkin_make
+```
+## Activation de votre workspace
+si vous avez plusieurs workspaces :
+```bash
+source ~/catkin_ws/devel/setup.bash
+```
+si vous n'en n'avez qu'un:
+```bash
+echo "source  ~/catkin_ws/devel/setup.bash"  >>  ~/.bashrc 
+source ~/.bashrc 
+```
