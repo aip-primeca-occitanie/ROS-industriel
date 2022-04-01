@@ -10,7 +10,7 @@ Il est necessaire d'installer les dépendances suivantes :
 
 
 ```bash
-sudo apt install ros-noetic-industrial-core
+sudo apt install ros-noetic-moveit
 sudo apt install libmodbus-dev
 ```
 
