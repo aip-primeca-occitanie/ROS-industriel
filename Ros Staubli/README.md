@@ -3,6 +3,7 @@ Driver pour Robot staubli (ici RX60)
 
 ## A propos 
 Driver pour Staubli (explication, et bibliothèque pour robot staubli)
+Il sera necessaire d'installer sur votre robot les fichier pgx (écrit en val3) sur ROS_com_rx60b afin de créer la communication avec le programme ros.
 
 ## Comment compiler ? 
 
