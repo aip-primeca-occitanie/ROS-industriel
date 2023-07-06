@@ -6,7 +6,7 @@ Pour piloter un automate type (modicon) de chez Schneider , les étapes sont nec
 
 1. faire apparaitre les mémoires partagés (mise au point.png)
 2. vérifier l'adresse que vous devez partager (et son type ici, par un booléens à l'adresse %m0) (objet d'ES.png)
-3. déclaré la variable que l'on souhaite partager  (editeur.png) (varialbe automate cellule.png)
+3. déclaré la variable que l'on souhaite partager  (editeur.png) (variable automate cellule.png)
 4. recopier la variable réel et en faire une copie image vers la copie que l'on souhaite partager (equation signal.png)
 
 Le programme fonctionne de la façon suivante : 
