@@ -3,8 +3,7 @@
 Voici les projets autour de ros developpés par l'aip primeca. 
 Ils s'articulent essentiellement autour des robots industriels. 
 
-Les 3 familles sont 
-- kuka (en cours de developpement non distribué)
+Les 2 familles sont 
 - staubli
 - yaskawa
 
